@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df14faf4-3436-4935-b6a3-467b1feeb340" name="Changes" comment="Tungusov Aleksandr 20.01" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson3" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F5EeW2zV10QbhHDS2pqP1L4QU0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexandr-PC\Desktop\3 курс\Web\les1\web-technologies-2022-2\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df14faf4-3436-4935-b6a3-467b1feeb340" name="Changes" comment="" />
+      <created>1663773650839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663773650839</updated>
+      <workItem from="1663773656931" duration="630000" />
+      <workItem from="1663774878121" duration="1153000" />
+      <workItem from="1663779316023" duration="391000" />
+      <workItem from="1663779730852" duration="855000" />
+      <workItem from="1663780611389" duration="6468000" />
+      <workItem from="1663816201620" duration="5184000" />
+      <workItem from="1663835840935" duration="2744000" />
+      <workItem from="1663910463387" duration="1322000" />
+      <workItem from="1664377134361" duration="910000" />
+      <workItem from="1664384308972" duration="9977000" />
+      <workItem from="1664438402111" duration="181000" />
+      <workItem from="1665247612353" duration="148000" />
+    </task>
+    <task id="LOCAL-00001" summary="Тестовый коммит">
+      <created>1663774113755</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663774113755</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Выполнено задание 2">
+      <created>1663911049089</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663911049089</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавлен фон">
+      <created>1663911097089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663911097089</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Изменен README.md">
+      <created>1663911854240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663911854240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Tungusov Aleksandr 20.01">
+      <created>1664393589951</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664393589951</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Тестовый коммит" />
+    <MESSAGE value="Выполнено задание 2" />
+    <MESSAGE value="Добавлен фон" />
+    <MESSAGE value="Изменен README.md" />
+    <MESSAGE value="Tungusov Aleksandr 20.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tungusov Aleksandr 20.01" />
+  </component>
+</project>
