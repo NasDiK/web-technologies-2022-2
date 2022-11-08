@@ -1,0 +1,186 @@
+@import "./global.css"
+@import "./fonts.css"
+@import "./utils.css"
+
+*
+  margin: 0
+  padding: 0
+
+.background_white 
+  background-color: white
+
+body
+  background: rgba(242, 244, 247, 1)
+
+.dodgerblue 
+  color: dodgerblue
+
+.gray
+  color: gray
+
+.btn 
+  border-radius: 5px
+  padding: 0 10px
+  background: blue
+  color: white
+  display: flex
+  align-items: center
+  cursor: pointer
+  user-select: none
+
+.mt-3 
+  margin-top: 30px
+
+
+.flex 
+  display: flex
+  flex-wrap: wrap
+
+.header_addaptive
+  display: none
+
+.header
+  font-weight: bold
+  width: 80%
+  margin: 0 10%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: white
+  border-radius: 10px
+  padding: 10px 25px
+  box-shadow: 2px 2px 5px gray
+  position: fixed
+  z-index: 9999
+
+  .logo
+    font-size: 24px
+    display: inline-block
+
+  ul
+    display: inline-block
+
+    li
+      display: inline
+      margin-right: 5px
+      cursor: pointer
+
+  .contacts, .email
+    display: inline-block
+    float: right
+
+  .contacts a, .email a
+    text-decoration: none
+    margin-right: 10px
+    color: dodgerblue
+    cursor: pointer
+
+.contacts:before 
+  content: url('../icons/bluePhone.svg')
+  margin-right: 5px
+
+.email::before 
+  content: url('../icons/blueEmail.svg')
+  margin-right: 5px
+
+.content 
+  padding-top: 50px
+  width: 80%
+  margin: 0 auto
+  padding-bottom: 50px
+
+  .container 
+    position: relative
+    width: 65%
+
+  .title 
+    font-size: 30px
+    font-weight: bold
+
+  .form 
+    background: white
+    border-radius: 10px
+    box-shadow: 2px 2px 5px gray
+    padding: 10px
+
+    .input_wrapper 
+      position: relative
+      width: 100%
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+
+      .input_form 
+        border: 0
+        padding-bottom: 5px
+        border-bottom: 1px solid lightgray
+        outline: none
+
+  .technologies_container 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .technologies 
+      position: relative
+      width: 50%
+    
+    ul li 
+      list-style: none
+      margin-top: 24px
+      font-size: 30px
+      width: fit-content
+
+    ul li::after 
+      content: " >"
+
+    ul li:hover 
+      border-bottom: 3px solid rgb(33, 105, 231)
+
+  .block_title 
+    h2 
+      font-size: 30px
+
+    h4 
+      font-size: 20px
+
+.footer 
+  background: rgba(16, 24, 40, 1)
+  border-radius: 10px
+  color: white
+  margin-left: 10%
+  margin-right: 10%
+
+  .infoContainer
+    display: flex
+    justify-content: space-between
+
+    .infoElement
+      padding: 0 50px
+      display: inline-block
+
+  .footer-label
+    text-align: center
+
+  .footer-label:before
+    content: url('../icons/footerSmoke.svg')
+    margin-right: 5px
+
+.caption-email, .caption-contact, .caption-address, .caption-document
+  color: rgba(152, 162, 179, 1)
+
+.caption-contact:before
+  content: url('../icons/phone.svg')
+  margin-right: 5px
+
+.caption-email:before
+  content: url('../icons/email.svg')
+  margin-right: 5px
+
+.caption-address:before
+  content: url('../icons/address.svg')
+  margin-right: 5px
+
+.caption-document:before
+  content: url('../icons/document.svg')
+  margin-right: 5px
