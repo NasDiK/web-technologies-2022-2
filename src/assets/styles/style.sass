@@ -11,6 +11,7 @@
 
 body
   background: rgba(242, 244, 247, 1)
+  overflow-x: hidden
 
 .dodgerblue 
   color: dodgerblue
@@ -84,14 +85,37 @@ body
   margin-right: 5px
 
 .content 
+  z-index: 2
   padding-top: 50px
   width: 80%
   margin: 0 auto
   padding-bottom: 50px
 
+  .developmentFormWrapper
+    overflow: hidden
+
+    .background_images
+      margin-left: 20px
+      position: relative
+      z-index: -1
+      overflow: hidden
+      height: 500px
+      width: fit-content
+      transform: rotate(-15deg)
+
+      img:nth-child(1)
+        position: relative
+        width: 242.5px
+        animation: move 10s infinite ease-in-out
+
+      img:nth-child(2)
+        position: relative
+        width: 242.5px
+        animation: move_reverse 10s infinite ease-in-out
+
   .container 
     position: relative
-    width: 65%
+    width: 50%
 
   .title 
     font-size: 30px
@@ -116,26 +140,31 @@ body
         border-bottom: 1px solid lightgray
         outline: none
 
-  .technologies_container 
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+  .technologies_wrapper
+    z-index: 2
+    background: white
+  
+    .technologies_container 
+      z-index: 2
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
 
-    .technologies 
-      position: relative
-      width: 50%
-    
-    ul li 
-      list-style: none
-      margin-top: 24px
-      font-size: 30px
-      width: fit-content
+      .technologies 
+        position: relative
+        width: 50%
+      
+      ul li 
+        list-style: none
+        margin-top: 24px
+        font-size: 30px
+        width: fit-content
 
-    ul li::after 
-      content: " >"
+      ul li::after 
+        content: " >"
 
-    ul li:hover 
-      border-bottom: 3px solid rgb(33, 105, 231)
+      ul li:hover 
+        border-bottom: 3px solid rgb(33, 105, 231)
 
   .block_title 
     h2 
@@ -184,3 +213,26 @@ body
 .caption-document:before
   content: url('../icons/document.svg')
   margin-right: 5px
+
+@keyframes move 
+  0%
+    top: 0
+  
+  50%
+    top: -650px
+
+  100%
+    top: 0
+  
+@keyframes move_reverse 
+  0%
+    top: -550px
+  
+
+  50%
+    top: 0px
+  
+
+  100%
+    top: -550px
+  
