@@ -43,7 +43,6 @@ body {
 
 .flex {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .header_addaptive {
@@ -106,6 +105,7 @@ body {
 }
 .content .developmentFormWrapper {
   overflow: hidden;
+  flex-wrap: nowrap;
 }
 .content .developmentFormWrapper .background_images {
   margin-left: 20px;
@@ -132,7 +132,7 @@ body {
 }
 .content .container {
   position: relative;
-  width: 50%;
+  width: 50vw;
 }
 .content .title {
   font-size: 30px;

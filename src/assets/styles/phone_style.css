@@ -34,6 +34,14 @@
   .header {
     display: none !important;
   }
+  .developmentFormWrapper {
+    overflow: hidden !important;
+    flex-wrap: wrap !important;
+  }
+  .developmentFormWrapper .container {
+    width: 100vw !important;
+    position: relative !important;
+  }
   .footer {
     margin: 0 !important;
   }
