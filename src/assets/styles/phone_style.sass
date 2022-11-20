@@ -1,44 +1,96 @@
 @media  screen and (max-width: 650px) 
-  .header_addaptive
-    font-weight: bold
+
+  .title_big
+    font-weight: 700
+    font-size: 28px
+    line-height: 144%
+
+  .title_regular
+    font-weight: 500
+    font-size: 15px
+    line-height: 20px
+
+  .title_medium
+    font-weight: 600
+    font-size: 20px
+    line-height: 24px
+
+  .bigSignWrapper
+    .bigSignHead
+      font-weight: 700
+      font-size: 28px
+      line-height: 24px
+
+    .bigSignFooter
+      font-weight: 500
+      font-size: 14px
+      line-height: 14px
+
+  .header
     width: 100%
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    background: white
-    border-radius: 10px
-    padding: 10px 25px
-    box-shadow: 2px 2px 5px gray
-    position: fixed
-    z-index: 9999
+    margin: 0
+
+    .menu
+      display: block
+
+    .logo
+      margin-left: auto
+      margin-right: auto
+
+    ul, .contacts, .email
+      display: none   
+
+  .content
+    .developmentFormWrapper
+      display: block
+      padding: 50px 16px
+
+      .container
+        width: 100%
+
+      .background_images
+        display: block
+
+    .technologies_wrapper
+      display: block
+      padding: 32px 16px
+
+      .flex-column
+        max-width: 100% !important
+        width: 100%
+
+      li
+        font-weight: 400 !important
+        font-size: 20px !important
+        line-height: 24px !important
     
-    .logo_container 
-      display: flex
-      width: 100%
-      justify-content: center
+    .downloadWrapper
+      padding: 32px 16px
 
-    .logo 
-      font-size: 24px
+      .iconTable_item
+        flex: 50% !important
 
-    .email 
-      display: none !important
+    .discussFormWrapper
+      padding: 32px 16px
 
-  .header_menu 
-    width: fit-content
-    display: flex
-    flex-direction: column
-    justify-content: space-around
+    .applicationStagesWrapper
+      padding: 32px 16px
 
-  .header 
-    display: none !important
+      .applicationStagesItems_item
+        width: 100% !important
+        max-width: 100% !important
+    
+    .ourTeamWrapper
+      padding: 32px 16px
 
-  .developmentFormWrapper
-    overflow: hidden !important
-    flex-wrap: wrap !important
+    .getFreeBookWrapper
+      padding: 32px 16px
 
-    .container
-      width: 100vw !important
-      position: relative !important
+      .getFreeBookForm
+        width: 100% !important
+
+    .FAQWrapper
+      padding: 32px 16px
 
   .footer 
     margin: 0 !important

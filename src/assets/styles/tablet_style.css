@@ -1,41 +1,80 @@
 @media screen and (min-width: 650px) and (max-width: 800px) {
-  .header_addaptive {
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: white;
-    border-radius: 10px;
-    padding: 10px 25px;
-    box-shadow: 2px 2px 5px gray;
-    position: fixed;
-    z-index: 9999;
+  .title_big {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 144%;
   }
-  .header_addaptive .logo_container {
-    display: flex;
-    width: 100%;
-    position: relative;
-    justify-content: center;
+  .title_regular {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
   }
-  .header_addaptive .logo {
-    font-size: 24px;
-  }
-  .header_addaptive .email {
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-  }
-  .header_menu {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .title_medium {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24p;
   }
   .header {
-    display: none !important;
+    width: 100%;
+    margin: 0;
+  }
+  .header .menu {
+    display: block;
+  }
+  .header ul {
+    display: none;
+  }
+  .header .contacts {
+    display: none;
+  }
+  .content .developmentFormWrapper {
+    padding: 50px 33px;
+  }
+  .content .technologies_wrapper {
+    padding: 32px 33px;
+    min-height: 0;
+  }
+  .content .technologies_wrapper .flex-column:nth-child(1) {
+    max-width: 50%;
+  }
+  .content .technologies_wrapper li {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+  .content .downloadWrapper {
+    padding: 32px 33px;
+  }
+  .content .downloadWrapper .iconTable_item {
+    flex: 50% !important;
+  }
+  .content .downloadWrapper .projectList_item {
+    font-size: 14px;
+  }
+  .content .discussFormWrapper {
+    padding: 32px 33px;
+  }
+  .content .discussFormWrapper .discussForm {
+    margin: 0 auto;
+  }
+  .content .applicationStagesWrapper {
+    padding: 32px 33px;
+  }
+  .content .applicationStagesWrapper .applicationStagesItems_item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .content .ourTeamWrapper {
+    padding: 32px 33px;
+  }
+  .content .getFreeBookWrapper {
+    padding: 32px 33px;
+  }
+  .content .getFreeBookWrapper .getFreeBookForm {
+    width: 100%;
+  }
+  .content .FAQWrapper {
+    padding: 32px 33px;
   }
   .footer {
     margin: 0 !important;

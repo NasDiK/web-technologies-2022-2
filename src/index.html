@@ -11,21 +11,12 @@
 </head>
 <body>
 
-<div class="header_addaptive">
-  <div class="header_menu">
-    <div class="header_menu_line"><img src="./assets/icons/line.svg" alt="test"/></div>
-    <div class="header_menu_line"><img src="./assets/icons/line.svg" alt="test"/></div>
-    <div class="header_menu_line"><img src="./assets/icons/line.svg" alt="test"/></div>
-  </div>
-  <div class="logo_container">
-    <span class="logo dodgerblue">IT Website</span>
-    <span class="email">
-      <a>itcompany@mail.com</a>
-    </span>
-  </div>
-</div>
-
 <div class="header">
+  <div class="menu">
+    <div class="header_menu_line"><img src="./assets/icons/line.svg" alt="test"/></div>
+    <div class="header_menu_line"><img src="./assets/icons/line.svg" alt="test"/></div>
+    <div class="header_menu_line"><img src="./assets/icons/line.svg" alt="test"/></div>
+  </div>
   <span class="logo dodgerblue">IT Website</span>
   <ul>
     <li>Services</li>
@@ -45,27 +36,21 @@
 
 <div class="content">
   <div class="flex developmentFormWrapper">
-    <div class="container mt-3">
-      <p class="title">Development of <span class="dodgerblue">mobile applications</span> and <span class="dodgerblue">web services</span> of any complexity</p>
-      <p>We create mobile application for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
-
-      <div class="form mt-3">
-        <p><b>Leave your contacts and we will call you back within 30 minutes</b></p>
-        <div class="input_wrapper">
-          <div>
-            <p class="gray">
-              Phone number
-            </p>
-            <img src="./assets/icons/Kz-flag.svg" height="20" width="20" alt=""/>
-            <input type="text" class="input_form" value="+7 (702) 517-11-98"/>
+    <div class="container">
+      <p class="title_big">Development of <span class="dodgerblue">mobile applications</span> and <span class="dodgerblue">web services</span> of any complexity</p>
+      <p class="description title_regular">We create mobile application for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
+      <div class="form">
+        <p class="title_regular bold">Leave your contacts and we will call you back within 30 minutes</p>
+        <div class="input_wrapper flex-wrap">
+          <div class="sharedInputWrapper">
+            <p class="sharedInputTitle">Phone number</p>
+            <input type="text" name="" id="" class="sharedInputElement" value="+7 (702) 517-11-98">
           </div>
-          <div>
-            <p class="gray">
-              Full name
-            </p>
-            <input type="text" class="input_form" value="Агадиль">
+          <div class="sharedInputWrapper">
+            <p class="sharedInputTitle">Full name</p>
+            <input type="text" name="" id="" class="sharedInputElement" value="Агадиль">
           </div>
-          <div class="btn">Get consultation</div>
+          <Button class="sharedButton">Get consultation</Button>
         </div>
       </div>
     </div>
@@ -74,23 +59,20 @@
       <img src="../static/images/column-left.webp" alt="Фото">
     </div>
   </div>
-  <div class="mt-3 technologies_wrapper">
-    <div class="block_title">
-      <h2 class="mt-3">Full development cycle!</h2>
-      <h4 class="mt-3">We use proven technologies</h4>
-    </div>
-    <div class="mt-3 technologies_container">
-      <div class="technologies">
-        <div>
-          <h3 class="mt-3">Web</h3>
-          <p class="mt-3">PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js / Nuxt / MySQL / Laravel / GO lang / Django / Python</p>
+  <div class="technologies_wrapper flex">
+      <div class="flex-column">
+        <h2 class="title_big">Full development cycle!</h2>
+        <h4 class="title_regular bold">We use proven technologies</h4>
+        <div class="stackItem">
+          <h3 class="title">Web</h3>
+          <p class="title_regular">PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js / Nuxt / MySQL / Laravel / GO lang / Django / Python</p>
         </div>
-        <div>
-          <h3 class="mt-3">Mobile</h3>
-          <p class="mt-3">Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
+        <div class="stackItem">
+          <h3 class="title">Mobile</h3>
+          <p class="title_regular">Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
         </div>
       </div>
-      <div>
+      <div class="flex-column">
         <ul>
           <li>iOS development</li>
           <li>Android development</li>
@@ -101,9 +83,186 @@
           <li>IT Consulting</li>
         </ul>
       </div>
-    </div>
-    
+  </div>
 
+  <div class="downloadWrapper">
+    <h2 class="title_big">Developed more than <span class="dodgerblue">100</span> projects in <span class="dodgerblue">15</span> industries</h2>
+    <div class="iconsTable">
+        <div class="iconTable_item title_regular">Social media</div>
+        <div class="iconTable_item title_regular">Fitness and sport</div>
+        <div class="iconTable_item title_regular">Bank</div>
+        <div class="iconTable_item title_regular">Construction</div>
+        <div class="iconTable_item title_regular">Game projects</div>
+        <div class="iconTable_item title_regular">AR technology</div>
+        <div class="iconTable_item title_regular">TV series</div>
+        <div class="iconTable_item title_regular">Online courses</div>
+        <div class="iconTable_item title_regular">Education</div>
+        <div class="iconTable_item title_regular">Auto, transport</div>
+        <div class="iconTable_item title_regular">Medicine, health</div>
+        <div class="iconTable_item title_regular">Restaraunts, food delivery</div>
+        <div class="iconTable_item title_regular">Marketplaces</div>
+        <div class="iconTable_item title_regular">Startups</div>
+        <div class="iconTable_item title_regular">Religion</div>
+    </div>
+    <h2 class="title_big">Projects we are proud of</h2>
+    <p class="title_regular">Our software development company is truly proud of the wonderful clients we have worked with. We enjoy a long-term partnership</p>
+    <ul class="projectList flex-wrap">
+      <li class="projectList_item bold">I-teka</li>
+      <li class="projectList_item bold">Dauletten</li>
+      <li class="projectList_item bold">Guru bosch</li>
+      <li class="projectList_item bold">Santo</li>
+      <li class="projectList_item bold">Home Credit Bank</li>
+      <li class="projectList_item bold">BI Partners</li>
+      <li class="projectList_item bold">Europharma</li>
+    </ul>
+    <div class="iTekaLine">
+      <h2 class="title_big">I-Teka</h2>
+      <Button class="sharedButton">View 100 more projects</Button>
+    </div>
+    <p class="title_regular">The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the application helped many people, which gives more value.</p>
+    <p class="title_regular gray">Business analysis / iOS / Android / QA / UI/UX Design</p>
+    <ul class="iTekaIcons">
+      <li>Kazakhstan</li>
+      <li>Medicine</li>
+    </ul>
+    <ul class="iTekaStatistic">
+      <li><h2 class="iTekaStatisticTitle">400%</h2><span class="iTekaStatisticGrowth">User Growth</span></li>
+      <li><h2 class="iTekaStatisticTitle">+ 200 000</h2><span class="iTekaStatisticGrowth">Active Users</span></li>
+    </ul>
+    <div class="iTekaDownload">
+      <img src="../static//images/appStoreDownload.png" alt="Фото">
+      <img src="../static///images/googlePlayDownload.png" alt="Фото">
+    </div>
+  </div>
+  <div class="discussFormWrapper flex-wrap">
+    <div class="leftBlock">
+      <h2 class="title_big">Let's discuss Your project</h2>
+      <p class="title_regular">Let's figure out how to create an effective application, its cost and terms of its development</p>
+     </div>
+    <div class="discussForm">
+      <div class="flex-wrap">
+        <div class="sharedInputWrapper">
+          <p class="sharedInputTitle">Best phone number</p>
+          <input type="text" name="" id="" class="sharedInputElement" value="+7 (702) 517-11-98">
+        </div>
+        <div class="sharedInputWrapper">
+          <p class="sharedInputTitle">Full name</p>
+          <input type="text" name="" id="" class="sharedInputElement" value="Иван Иванов">
+        </div>
+      </div>
+      <Button class="sharedButton float-right discussFormButton">Discuss the project</Button>
+    </div>
+  </div>
+  <div class="applicationStagesWrapper">
+    <h2 class="title_big">Application Development Stages</h2>
+    <div class="applicationStagesItems flex-wrap" style="justify-content: space-between;">
+      <div class="flex" style="flex-direction: column;">
+        <div class="applicationStagesItems_item">
+          <p class="title_medium">Analysis</p>
+          <p class="title_regular">We write technical specifications for development, taking into account the business processes and technologies of the customer and the needs of users.</p>
+        </div>
+        <div class="applicationStagesItems_item">
+          <p class="title_medium">Design</p>
+          <p class="title_regular">We adapt the customer's corporate identity to the platform guidelines. We draw convenient and understandable interfaces.</p>
+        </div>
+        <div class="applicationStagesItems_item">
+          <p class="title_medium">Development</p>
+          <p class="title_regular">We create an extensible architecture, write clean and stable code. We integrate with customer technologies.</p>
+        </div>
+      </div>
+      <div class="flex" style="flex-direction: column;">
+        <div class="applicationStagesItems_item">
+          <p class="title_medium">Testing</p>
+          <p class="title_regular">We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions</p>
+        </div>
+        <div class="applicationStagesItems_item">
+          <p class="title_medium">Launching</p>
+          <p class="title_regular">We design the application page and publish it in the App Store and Google Play stores.
+          </p>
+        </div>
+        <div class="applicationStagesItems_item">
+          <p class="title_medium">Support</p>
+          <p class="title_regular">We monitor the stability of the application, update it for new devices and versions of iOS and Android.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ourTeamWrapper flex">
+    <div>
+      <h2 class="title_big">Our team</h2>
+      <p class="title_regular bold">Thousand is a full-cycle digital production company with its own product analytics, design, web and mobile development.</p>
+      <div class="flex-wrap" style="margin-top: 16px; justify-content: space-between;">
+        <div class="bigSignWrapper">
+          <h2 class="bigSignHead">28</h2>
+          <p class="bigSignFooter">team members</p>
+        </div>
+        <div class="bigSignWrapper">
+          <h2 class="bigSignHead">+100</h2>
+          <p class="bigSignFooter">projects</p>
+        </div>
+        <div class="bigSignWrapper">
+          <h2 class="bigSignHead">7 years</h2>
+          <p class="bigSignFooter">in IT sphere</p>
+        </div>
+      </div>
+      <p class="title_regular bold">All the necessary specialists - from a designer to a tester - are on our staff. We hire the best specialists in the market. It's expensive but worth it</p>
+    </div>
+  </div>
+  <div class="getFreeBookWrapper">
+    <h2 class="title_big">Get the book for free by leaving your contacts</h2>
+    <div class="getFreeBookForm">
+      <div class="flex-wrap">
+        <div class="sharedInputWrapper" style="margin-right: 24px;">
+          <p class="sharedInputTitle">Phone number</p>
+          <input type="text" name="" id="" class="sharedInputElement" value="+7 (111) 111-11-11">
+        </div>
+        <div class="sharedInputWrapper">
+          <p class="sharedInputTitle">&nbsp;</p>
+          <input type="text" name="" id="" class="sharedInputElement" placeholder="Your full name">
+        </div>
+      </div>
+      <div class="sharedInputWrapper">
+        <p class="sharedInputTitle">email</p>
+        <input type="text" name="" id="" class="sharedInputElement" value="mail@mail.com">
+      </div>
+      <Button class="sharedButton">Send me ebook to my mail</Button>
+    </div>
+  </div>
+  <div class="FAQWrapper">
+    <h2 class="title_big">FAQ</h2>
+    <div class="flex-wrap FAQTable">
+      <div class="flex-column">
+        <div class="column-item flex">
+          <div>
+            <p class="title_medium bold">What is the cost of a mobile application?</p>
+          </div>
+        </div>
+        <div class="column-item flex">
+          <div>
+            <p class="title_medium bold">Do you provide a guarantee for the mobile application?</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-column">
+        <div class="column-item flex">
+          <div>
+            <p class="title_medium bold">How long will development take?</p>
+            <p class="title_regular">Development terms directly depend on the requirements for the mobile application, the characteristics of the company, as well as the wishes of the customer.
+              <br><br>
+              Average development time from start to finished application:
+              Medium projects up to 3 months.
+              Large projects about 4-6 months.
+              To get a more accurate estimate of the project completion time, it is necessary to determine the main task of the application, think over its logic and functionality.
+            </p>
+          </div>
+        </div>
+        <div class="column-item flex">
+          <div>
+            <p class="title_medium bold">I will not tell my idea, do you guarantee confidentiality?</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

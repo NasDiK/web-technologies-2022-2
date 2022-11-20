@@ -16,8 +16,32 @@ body
 .dodgerblue 
   color: dodgerblue
 
+.title_big
+  font-size: 36px
+  font-weight: 700
+  line-height: 144%
+
+.title_medium
+  font-size: 20px
+  font-weight: 600
+  line-height: 22px
+
+.title_regular
+  font-weight: 400
+  font-size: 16px
+  line-height: 20px
+
+.inline-block
+  display: inline-block
+
+.bold
+  font-weight: bold
+
 .gray
-  color: gray
+  color: #475467
+
+.float-right
+  float: right
 
 .btn 
   border-radius: 5px
@@ -29,12 +53,66 @@ body
   cursor: pointer
   user-select: none
 
-.mt-3 
-  margin-top: 30px
+.sharedButton
+  padding: 11px 24px
+  background-color: #2D66EE
+  color: white
+  border-radius: 8px
+  cursor: pointer
+  border: 0
+  font-weight: 600
+  font-size: 14px
+  line-height: 18px
+  height: fit-content
+
+.sharedButton:active
+  background-color: #2555c7
+
+.sharedInputWrapper
+  .sharedInputTitle
+    font-weight: 500
+    font-size: 13px
+    line-height: 16px
+    color: #667085
+
+  .sharedInputElement
+    width: 100%
+    border: 0
+    font-weight: 400
+    font-size: 17px
+    line-height: 22px
+    border-bottom: 1px solid #D0D5DD
+
+
+  .sharedInputElement:focus
+    outline: 0
+
+.bigSignWrapper
+  margin-right: 16px
+
+  .bigSignHead
+    font-size: 48px
+    font-weight: 700
+    line-height: 144%
+
+  .bigSignFooter
+    margin-top: 8px
+    color: #667085
+    font-size: 15px
+    font-weight: 500
+    line-height: 20px
 
 
 .flex 
   display: flex
+
+.flex-wrap
+  display: flex
+  flex-wrap: wrap
+
+.flex-column
+  display: flex
+  flex-direction: column
 
 .header_addaptive
   display: none
@@ -52,6 +130,9 @@ body
   box-shadow: 2px 2px 5px gray
   position: fixed
   z-index: 9999
+
+  .menu
+    display: none
 
   .logo
     font-size: 24px
@@ -86,11 +167,12 @@ body
 .content 
   z-index: 2
   padding-top: 50px
-  width: 80%
+  width: 100%
   margin: 0 auto
   padding-bottom: 50px
 
   .developmentFormWrapper
+    padding: 80px 108px
     overflow: hidden
     flex-wrap: nowrap
 
@@ -117,54 +199,58 @@ body
     position: relative
     width: 50vw
 
-  .title 
-    font-size: 30px
-    font-weight: bold
+    .description
+      margin-top: 24px
 
   .form 
+    margin-top: 32px
     background: white
     border-radius: 10px
     box-shadow: 2px 2px 5px gray
-    padding: 10px
+    padding: 32px
 
-    .input_wrapper 
-      position: relative
-      width: 100%
-      display: flex
-      flex-flow: row wrap
-      justify-content: space-between
-
-      .input_form 
-        border: 0
-        padding-bottom: 5px
-        border-bottom: 1px solid lightgray
-        outline: none
+    .input_wrapper
+      margin-top: 24px
+  
+      .sharedInputWrapper
+        margin-bottom: 24px
+        margin-right: 24px
+       
 
   .technologies_wrapper
-    z-index: 2
+    padding: 80px 108px
     background: white
-  
-    .technologies_container 
-      z-index: 2
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
+    min-height: 580px
+    flex-wrap: wrap
+    justify-content: space-between
 
-      .technologies 
-        position: relative
-        width: 50%
-      
-      ul li 
-        list-style: none
-        margin-top: 24px
-        font-size: 30px
-        width: fit-content
+    .title_regular
+      margin-top: 32px
+    
+    .stackItem
+      max-width: 496px
+      margin-top: 32px
 
-      ul li::after 
-        content: " >"
+      .title
+        font-weight: 600
+        font-size: 20px
+        line-height: 24px
 
-      ul li:hover 
-        border-bottom: 3px solid rgb(33, 105, 231)
+      .title_regular
+        margin-top: 16px
+
+   
+    ul li 
+      list-style: none
+      margin-top: 24px
+      font-size: 30px
+      width: fit-content
+
+    ul li::after 
+      content: " >"
+
+    ul li:hover 
+      border-bottom: 3px solid rgb(33, 105, 231)
 
   .block_title 
     h2 
@@ -172,6 +258,181 @@ body
 
     h4 
       font-size: 20px
+  
+  .downloadWrapper
+    padding: 80px 108px
+    background: #F2F4F7
+
+    .downloadWrapper_title
+      display: block
+
+    .iconsTable
+      margin-top: 48px
+      display: flex
+      flex-wrap: wrap
+
+      .iconTable_item
+        flex: 33%
+        margin-top: 15px
+        list-style: none
+
+    .title_big
+      margin-top: 44px
+
+    .title_regular
+      margin-top: 24px
+    
+    .projectList
+      margin-top: 26px
+      display: flex
+
+      .projectList_item
+        padding: 16px
+        border: 1px solid black //TODO убрать
+        list-style: none
+
+    .iTekaLine
+      margin-top: 32px
+      display: flex
+      justify-content: space-between
+
+      .title_big
+        margin-top: 0
+         
+    .iTekaDescription
+      min-width: 459px
+      width: 459px
+      margin-top: 32px
+
+    .iTekaIcons
+      margin-top: 32px
+      display: flex
+      list-style: none
+
+      li
+        margin-right: 32px
+        font-size: 16px
+        line-height: 20px
+
+  .iTekaStatistic
+    margin-top: 32px
+    display: flex
+    list-style: none
+
+    li
+      margin-right: 53px
+
+    .iTekaStatisticTitle
+      font-weight: 700
+      font-size: 20px
+      line-height: 144%
+
+    .iTekaStatisticGrowth
+      color: #667085
+      font-weight: 400
+      font-size: 12px
+      line-height: 16px
+
+  .iTekaDownload
+    margin-top: 32px
+
+    img
+      margin-right: 16px
+  
+  .discussFormWrapper
+    padding: 80px 108px
+    background: #2D66EE
+    justify-content: space-between
+
+    .title_big
+      color: white
+    
+    .title_regular
+      margin-top: 32px
+      color: white
+
+    .leftBlock
+      margin-bottom: 24px
+    
+    .discussForm
+      border-radius: 12px
+      padding: 24px
+      background: white
+      overflow: auto
+      width: 600px
+
+      .sharedInputWrapper
+        margin-right: 24px
+        margin-bottom: 8px
+
+      .discussFormButton
+        margin-top: 24px
+  
+  .applicationStagesWrapper
+    background: white
+    padding: 80px 108px
+
+    .applicationStagesItems
+      margin-top: 10px
+
+      .applicationStagesItems_item
+        padding: 24px
+        border: 1px solid black
+        max-width: 392px
+        min-height: 172px
+        margin-top: 24px
+        
+        .title_regular
+          margin-top: 16px
+
+  .ourTeamWrapper
+    background: #F2F4F7
+    padding: 80px 108px
+
+    .title_regular
+      margin-top: 32px
+
+  .getFreeBookWrapper
+    background: #2453EA
+    padding: 80px 108px
+
+    .title_big
+      color: #FCFCFD
+    
+    .getFreeBookForm
+      padding: 24px
+      margin-top: 40px
+      background: white
+      border-radius: 12px
+      width: fit-content
+
+      .sharedInputElement
+        margin-bottom: 16px
+
+      .sharedInputElement:nth-child(2)
+        position: relative
+        width: 100%
+      
+      .sharedButton
+        margin-top: 24px
+
+  .FAQWrapper
+    padding: 80px 108px
+
+    .FAQTable
+      margin-top: 40px
+
+      .flex-column
+        flex: 50%
+
+      .column-item
+        padding: 16px
+        border-top: 1px solid #D0D5DD
+        border-bottom: 1px solid #D0D5DD
+        align-items: center
+
+        .title_regular
+          margin-top: 24px
 
 .footer 
   background: rgba(16, 24, 40, 1)
@@ -228,11 +489,8 @@ body
   0%
     top: -550px
   
-
   50%
     top: 0px
   
-
   100%
     top: -550px
-  

@@ -1,46 +1,93 @@
 @media screen and (max-width: 650px) {
-  .header_addaptive {
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: white;
-    border-radius: 10px;
-    padding: 10px 25px;
-    box-shadow: 2px 2px 5px gray;
-    position: fixed;
-    z-index: 9999;
+  .title_big {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 144%;
   }
-  .header_addaptive .logo_container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  .title_regular {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
   }
-  .header_addaptive .logo {
-    font-size: 24px;
+  .title_medium {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
   }
-  .header_addaptive .email {
-    display: none !important;
+  .bigSignWrapper .bigSignHead {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
   }
-  .header_menu {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .bigSignWrapper .bigSignFooter {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
   }
   .header {
-    display: none !important;
+    width: 100%;
+    margin: 0;
   }
-  .developmentFormWrapper {
-    overflow: hidden !important;
-    flex-wrap: wrap !important;
+  .header .menu {
+    display: block;
   }
-  .developmentFormWrapper .container {
-    width: 100vw !important;
-    position: relative !important;
+  .header .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header ul, .header .contacts, .header .email {
+    display: none;
+  }
+  .content .developmentFormWrapper {
+    display: block;
+    padding: 50px 16px;
+  }
+  .content .developmentFormWrapper .container {
+    width: 100%;
+  }
+  .content .developmentFormWrapper .background_images {
+    display: block;
+  }
+  .content .technologies_wrapper {
+    display: block;
+    padding: 32px 16px;
+  }
+  .content .technologies_wrapper .flex-column {
+    max-width: 100% !important;
+    width: 100%;
+  }
+  .content .technologies_wrapper li {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+  .content .downloadWrapper {
+    padding: 32px 16px;
+  }
+  .content .downloadWrapper .iconTable_item {
+    flex: 50% !important;
+  }
+  .content .discussFormWrapper {
+    padding: 32px 16px;
+  }
+  .content .applicationStagesWrapper {
+    padding: 32px 16px;
+  }
+  .content .applicationStagesWrapper .applicationStagesItems_item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .content .ourTeamWrapper {
+    padding: 32px 16px;
+  }
+  .content .getFreeBookWrapper {
+    padding: 32px 16px;
+  }
+  .content .getFreeBookWrapper .getFreeBookForm {
+    width: 100% !important;
+  }
+  .content .FAQWrapper {
+    padding: 32px 16px;
   }
   .footer {
     margin: 0 !important;
