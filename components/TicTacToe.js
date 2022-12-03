@@ -102,7 +102,6 @@ export const TicTacToe = {
    * @returns {boolean} - true если есть пустые блоки, false - если нет
    */
   checkHasEmptyBlocks() {
-    console.log(this.matrix.some((row)=>row.some(x=>!x)));
     return this.matrix.some((row)=>row.some(x=>!x));
   },
 
@@ -126,12 +125,10 @@ export const TicTacToe = {
 
     this.isGameEnd = false;
     this.isXTurn = true;
-    console.log(this.el.children);
 
     for(let child of this.el.children) {
       child.innerHTML = "";
     }
-
   },
   
   /**
