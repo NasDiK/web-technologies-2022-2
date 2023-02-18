@@ -3,16 +3,22 @@ import {size} from '../enums/index.js';
 export default class Pizza {
   name; //название
   baseEnergy; //каллории
-  basePrice; //цена
+  baseCost; //цена
   size; //размер-enum
   toppings = []; //допы
+  addingBySize; //добавочная цена за размер
 
-  constructor() {
+  constructor(name, baseCost, baseEnergy, addingBySize) {
+    this.name = name;
+    this.baseCost = baseCost;
+    this.baseEnergy = baseEnergy;
+    this.addingBySize = addingBySize;
 
+    this.size = size.SMALL;
   }
 
   set size(value) {
-    if (![size.BIG, size.MEDIUM, size.SMALL].includes(value))
+    if (![Object.values(size)].includes(value))
       throw new Error('unexpected size');
     else {
         this.size=value;
@@ -40,7 +46,9 @@ export default class Pizza {
 
   getStuffing = () => {}
 
-  calculatePrice = () => {}
+  calculatePrice = () => {
+    return this.baseCost + this.addingBySize[this.size].cost; //+топы надо ещё
+  }
 
   calculateCalories = () => {}    
 }
