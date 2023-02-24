@@ -1,7 +1,8 @@
 import Order from './models/Order.js';
 import Pizza from './models/Pizza.js';
-import {size} from './enums/index.js';
-import {baseAssortiment, toppings} from './data/index.js';
+import {sizeEnum, toppingsEnum} from './enums/index.js';
+import {toppings} from './data/index.js';
+import { baseAssortiment } from './data/baseAssortment.js';
 
 const orders = [];
 
@@ -20,5 +21,21 @@ function addOrder() {
   console.log(orders);
 }
 
-console.log(baseAssortiment);
-console.log(toppings)
+const margarita = baseAssortiment.margarita;
+const pepperoni = baseAssortiment.pepperoni;
+const bavarian = baseAssortiment.bavarian;
+const enums = {sizeEnum, toppingsEnum}
+
+console.group('Т.к. использовал модульность вынес в глобалы');
+console.log('Pizza = class Pizza');
+console.log('margarita, pepperoni, bavarian, toppings, baseAssortiment, enums доступны');
+console.log('Балуйтесь в консоле)');
+console.groupEnd();
+
+window.margarita = margarita;
+window.pepperoni = pepperoni;
+window.bavarian = bavarian;
+window.baseAssortiment = baseAssortiment;
+window.toppings = toppings;
+window.enums = enums;
+window.Pizza = Pizza;

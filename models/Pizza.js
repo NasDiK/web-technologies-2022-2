@@ -1,4 +1,5 @@
-import {size} from '../enums/index.js';
+import {sizeEnum, toppingsEnum} from '../enums/index.js';
+import {toppings} from '../data/index.js';
 
 export default class Pizza {
   name; //название
@@ -14,11 +15,11 @@ export default class Pizza {
     this.baseEnergy = baseEnergy;
     this.addingBySize = addingBySize;
 
-    this.size = size.SMALL;
+    this.size = sizeEnum.SMALL;
   }
 
   set size(value) {
-    if (![Object.values(size)].includes(value))
+    if (![Object.values(sizeEnum)].includes(value))
       throw new Error('unexpected size');
     else {
         this.size=value;
@@ -30,7 +31,12 @@ export default class Pizza {
   }
 
   addTopping(topping) {
-    this.toppings.push(topping);
+    if(!Object.keys(toppings).includes(topping.toString())) {
+      throw new Error('Несуществующий топпинг');
+    }
+    else {
+      this.toppings.push(toppings[topping][this.size]);
+    }
   }
 
   removeTopping(topping) {
@@ -38,7 +44,9 @@ export default class Pizza {
     this.toppings.splice(topIndex, 1);
   }
 
-  getToppings(topping) {}
+  getToppings() {
+    return this.toppings;
+  }
 
   getSize = () => {
     return this.size;
