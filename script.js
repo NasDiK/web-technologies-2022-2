@@ -17,6 +17,7 @@ console.group('Т.к. использовал модульность вынес �
 console.log('Pizza = class Pizza');
 console.log('margarita, pepperoni, bavarian, toppings, baseAssortiment, enums доступны');
 console.log('Балуйтесь в консоле)');
+console.log(`Пример const pizz = baseAssortiment['margarita'] и развлекайтесь с ней`);
 console.groupEnd();
 
 window.margarita = margarita;
