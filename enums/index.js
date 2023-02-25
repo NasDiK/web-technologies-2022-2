@@ -9,3 +9,9 @@ export const toppingsEnum = {
   CHEESE_BOARD: 2, //Сырный борт
   CHEDDAR_AND_PARMESAN: 3 //Чедер и Пармезан
 };
+
+export const nameTypeEnum = {
+  MARGARITA: 1, //Маргарита
+  PEPPERONI: 2, //Пепперони
+  BAVARIAN: 3 //Баварская
+};

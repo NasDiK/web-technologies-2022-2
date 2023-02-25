@@ -1,8 +1,8 @@
-import {sizeEnum} from '../enums/index.js';
+import {sizeEnum, nameTypeEnum} from '../enums/index.js';
 import Pizza from '../models/Pizza.js'
 
 export const baseAssortiment = {
-    margarita: new Pizza('Маргарита', 500, 300, {
+    margarita: new Pizza(nameTypeEnum.MARGARITA, 500, 300, {
       [sizeEnum.SMALL]: {
         energy: 100,
         cost: 100
@@ -12,7 +12,7 @@ export const baseAssortiment = {
         cost: 200
       }
     }),
-    pepperoni: new Pizza('Пепперони', 800, 400, {
+    pepperoni: new Pizza(nameTypeEnum.PEPPERONI, 800, 400, {
       [sizeEnum.SMALL]: {
         energy: 100,
         cost: 100
@@ -22,7 +22,7 @@ export const baseAssortiment = {
         cost: 200
       }
     }),
-    bavarian: new Pizza('Баварская', 700, 450, {
+    bavarian: new Pizza(nameTypeEnum.BAVARIAN, 700, 450, {
       [sizeEnum.SMALL]: {
         energy: 100,
         cost: 100

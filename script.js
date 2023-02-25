@@ -1,30 +1,29 @@
-import Order from './models/Order.js';
 import Pizza from './models/Pizza.js';
-import {sizeEnum, toppingsEnum} from './enums/index.js';
+import {sizeEnum, toppingsEnum, nameTypeEnum} from './enums/index.js';
 import {toppings} from './data/index.js';
 import { baseAssortiment } from './data/baseAssortment.js';
 
-const orders = [];
+// const orders = [];
 
-const btn = document.getElementById('addOrderBtn');
+// const btn = document.getElementById('addOrderBtn');
 
-btn.addEventListener('click', addOrder, false);
+// btn.addEventListener('click', addOrder, false);
 
-const [ordersDiv] = document.getElementsByClassName('orders');
+// const [ordersDiv] = document.getElementsByClassName('orders');
 
-function addOrder() {
-  orders.push(new Order());
+// function addOrder() {
+//   orders.push(new Order());
 
-  const divOrderChild = document.createElement('div');
-  divOrderChild.innerHTML = 'test';
-  ordersDiv.appendChild(divOrderChild);
-  console.log(orders);
-}
+//   const divOrderChild = document.createElement('div');
+//   divOrderChild.innerHTML = 'test';
+//   ordersDiv.appendChild(divOrderChild);
+//   console.log(orders);
+// }
 
 const margarita = baseAssortiment.margarita;
 const pepperoni = baseAssortiment.pepperoni;
 const bavarian = baseAssortiment.bavarian;
-const enums = {sizeEnum, toppingsEnum}
+const enums = {sizeEnum, toppingsEnum, nameTypeEnum}
 
 console.group('Т.к. использовал модульность вынес в глобалы');
 console.log('Pizza = class Pizza');
