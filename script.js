@@ -3,22 +3,10 @@ import {sizeEnum, toppingsEnum, nameTypeEnum} from './enums/index.js';
 import {toppings} from './data/index.js';
 import { baseAssortiment } from './data/baseAssortment.js';
 
-// const orders = [];
-
-// const btn = document.getElementById('addOrderBtn');
-
-// btn.addEventListener('click', addOrder, false);
-
-// const [ordersDiv] = document.getElementsByClassName('orders');
-
-// function addOrder() {
-//   orders.push(new Order());
-
-//   const divOrderChild = document.createElement('div');
-//   divOrderChild.innerHTML = 'test';
-//   ordersDiv.appendChild(divOrderChild);
-//   console.log(orders);
-// }
+/*
+https://docs.google.com/document/d/1HZ2Wgc5Uv3hozdbiISnCjdhK2bcGqTCkDh_ny215utg/edit задание
+*/
+console.log('Ссылка на задание: https://docs.google.com/document/d/1HZ2Wgc5Uv3hozdbiISnCjdhK2bcGqTCkDh_ny215utg/edit');
 
 const margarita = baseAssortiment.margarita;
 const pepperoni = baseAssortiment.pepperoni;
