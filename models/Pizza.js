@@ -7,7 +7,7 @@ export default class Pizza {
   baseCost; //цена
   size; //размер-enum
   toppings = []; //допы
-  addingBySize; //добавочная цена за размер
+  addingBySize; //добавочная за размер
 
   constructor(nameType, baseCost, baseEnergy, addingBySize, size = sizeEnum.SMALL) {
     this.nameType = nameType || nameTypeEnum.MARGARITA;
@@ -25,8 +25,10 @@ export default class Pizza {
         return 'Маргарита';
       case nameTypeEnum.PEPPERONI:
         return 'Пеперони';
-      default:
-          return null;
+      default: //на крайняк из енума будет прямое значение брать
+        const values = Object.values(nameTypeEnum);
+        const index = values.findIndex((id)=>id===this.size);
+        return Object.keys(nameTypeEnum)[index];
     }
   }
 
