@@ -2,6 +2,7 @@ import Pizza from './models/Pizza.js';
 import {sizeEnum, toppingsEnum, nameTypeEnum} from './enums/index.js';
 import {toppings} from './data/index.js';
 import { baseAssortiment } from './data/baseAssortment.js';
+import {renderPizzaCard} from './models/Components.js';
 
 /*
 https://docs.google.com/document/d/1HZ2Wgc5Uv3hozdbiISnCjdhK2bcGqTCkDh_ny215utg/edit задание
@@ -27,3 +28,9 @@ window.baseAssortiment = baseAssortiment;
 window.toppings = toppings;
 window.enums = enums;
 window.Pizza = Pizza;
+
+const rootDiv = document.getElementById('root');
+
+rootDiv.innerHTML = renderPizzaCard('margarita', 1);
+rootDiv.innerHTML += renderPizzaCard('pepperoni', 2);
+rootDiv.innerHTML += renderPizzaCard('bavarian', 3);

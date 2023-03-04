@@ -3,6 +3,23 @@ body {
   padding: 0;
 }
 
-.orders {
+#root {
   display: flex;
+}
+
+#root >:not(:last-child) {
+  margin-right: 20px;
+}
+
+.pizza-card-wrapper {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+}
+
+.pizza-card-wrapper img {
+  width: 250px;
+  height: 250px;
 }
