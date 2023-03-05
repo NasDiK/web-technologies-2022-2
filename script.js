@@ -2,12 +2,12 @@ import Pizza from './models/Pizza.js';
 import {sizeEnum, toppingsEnum, nameTypeEnum} from './enums/index.js';
 import {toppings} from './data/index.js';
 import { baseAssortiment } from './data/baseAssortment.js';
-import {renderPizzaCard} from './models/Components.js';
+import {renderPizzas, renderControl} from './models/Components.js';
 
 /*
-https://docs.google.com/document/d/1HZ2Wgc5Uv3hozdbiISnCjdhK2bcGqTCkDh_ny215utg/edit задание
+https://docs.google.com/document/d/164yUCcxY7FH5h3rMhApGNd8RpcPOLX_gTGDBMJ87kMc/edit задание
 */
-console.log('Ссылка на задание: https://docs.google.com/document/d/1HZ2Wgc5Uv3hozdbiISnCjdhK2bcGqTCkDh_ny215utg/edit');
+console.log('Ссылка на задание: https://docs.google.com/document/d/164yUCcxY7FH5h3rMhApGNd8RpcPOLX_gTGDBMJ87kMc/edit');
 
 const margarita = baseAssortiment.margarita;
 const pepperoni = baseAssortiment.pepperoni;
@@ -30,7 +30,15 @@ window.enums = enums;
 window.Pizza = Pizza;
 
 const rootDiv = document.getElementById('root');
+const pizzasDiv = document.getElementById('pizzasContainer');
+const controlDiv = document.getElementById('control');
+const basketDiv = document.getElementById('basket');
 
-rootDiv.innerHTML = renderPizzaCard('margarita', 1);
-rootDiv.innerHTML += renderPizzaCard('pepperoni', 2);
-rootDiv.innerHTML += renderPizzaCard('bavarian', 3);
+const Pizzas=[
+  baseAssortiment['margarita'],
+  baseAssortiment['pepperoni'],
+  baseAssortiment['bavarian']
+];
+
+renderPizzas(Pizzas, pizzasDiv);
+renderControl(baseAssortiment['margarita'], controlDiv);

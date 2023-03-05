@@ -3,11 +3,17 @@ body {
   padding: 0;
 }
 
-#root {
+.flex-column {
   display: flex;
+  flex-direction: column;
 }
 
-#root >:not(:last-child) {
+#pizzasContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#pizzasContainer >:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -22,4 +28,39 @@ body {
 .pizza-card-wrapper img {
   width: 250px;
   height: 250px;
+}
+
+.toppings-wrapper {
+  display: flex;
+}
+
+.toppings-wrapper >:not(:last-child){
+  margin-right: 20px;
+}
+
+.topping-card {
+  width: 150px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.topping-card img {
+  margin-top: 20px;
+  width: 125px;
+  height: 125px;
+  border: 1px dashed black;
+}
+
+#control button {
+  margin-top: 14px;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+#control button:active {
+  background-color: rgb(0, 255, 136)
+}
+
+.active {
+  background-color: aqua;
 }
