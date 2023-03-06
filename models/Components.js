@@ -37,20 +37,23 @@ const getToppingLogoUrl = (type) => {
  * @param {import('../enums/index.js').nameTypeEnum} type nameTypeEnum
  * @returns {HTMLElement}  
  */
-export const renderPizzaCard = (title, type) => {
+export const renderPizzaCard = (title, type, isActiveNumber) => {
   let result = `
-  <div class="pizza-card-wrapper">
+  <div class="pizza-card-wrapper pizza-${type} ${Number(isActiveNumber) === type && 'active'}">
     <img src="${getPizzasLogoUrl(type)}" alt="пицца" />
     <h3>${title}</h3>
   </div>
   `;
-
+  
   return result;
 };
 
-export const renderToppingCard = (cost, type) => {
+export const renderToppingCard = (pizza, cost, type) => {
+  const toppingName = Object.entries(enums.toppingsEnum).find(([_name, _type])=>_type === type)[0];
+  const isToppingActive = pizza.toppings.find(({name})=>name === toppingName);
+
   let result = `
-  <div class="topping-card">
+  <div class="topping-card ${toppingName} ${isToppingActive && 'active' || ''}">
     <img src="${getToppingLogoUrl(type)}" alt="топпинг" />
     <p>${cost} Р</p>
   </div>
@@ -67,26 +70,19 @@ export const renderToppingCard = (cost, type) => {
  * @param {HTMLElement} element 
  * @returns {void}
  */
-export const renderPizzas = (pizzas, element) => {
-  element.innerHTML = pizzas.reduce((acc, pizza)=>{
-    const {name, nameType} = pizza;
+export const renderPizzas = (pizzas, element, clickCardHandler) => {
+  const pizzasNumbers = Object.keys(pizzas).filter(item=>Number.isInteger(Number(item)));
 
-    return acc+renderPizzaCard(name, nameType);
+  element.innerHTML = pizzasNumbers.reduce((acc, number)=>{
+    const {name, nameType} = pizzas[number].class;
+
+    return acc+renderPizzaCard(name, nameType, pizzas.isActive);
   }, '');
 
-  const elements = document.getElementsByClassName('pizza-card-wrapper');
-  for (element of elements) {
-    element.addEventListener('click', (function (ev) {
-      for (element of elements) {
-        if (element !== this) {
-          element.classList.remove('active');
-        }
-        else {
-          toggleActive.apply(element, ev);
-        }
-      }
-    }).bind(element));
-  }
+  pizzasNumbers.forEach((type)=>{
+    const elem = document.getElementsByClassName(`pizza-${type}`)[0];
+    elem.addEventListener('click', ()=>clickCardHandler(type));
+  })
 };
 
 /**
@@ -95,39 +91,69 @@ export const renderPizzas = (pizzas, element) => {
  * @param {HTMLElement} element 
  * @returns {void}
  */
-export const renderControl = (pizza, element) => {
+export const renderControl = (pizzaObj, element, {changePizzaSize, rerenderAll}) => {
+  if (pizzaObj === undefined) {
+    element.innerHTML = '<h2>Выберите пиццу</h2';
+    return;
+  }
+
+  const {class: pizza} = pizzaObj;
+
   const cost = pizza.calculatePrice();
   const energy = pizza.calculateCalories();
 
   element.innerHTML = `
     <h2>Выберите размер</h2>
     <select id="select-size">
-      ${pizza.addingBySize[enums.sizeEnum.BIG] && `<option value='${enums.sizeEnum.BIG}'>Большая</option>`}
-      ${pizza.addingBySize[enums.sizeEnum.MEDIUM] && `<option value='${enums.sizeEnum.MEDIUM}'>Средняя</option>`}
-      ${pizza.addingBySize[enums.sizeEnum.SMALL] && `<option value='${enums.sizeEnum.SMALL}'>Маленькая</option>`}
+      ${pizza.addingBySize[enums.sizeEnum.BIG] && `<option value='${enums.sizeEnum.BIG}' ${pizza.size === enums.sizeEnum.BIG && 'selected'}>Большая</option>`}
+      ${pizza.addingBySize[enums.sizeEnum.MEDIUM] && `<option value='${enums.sizeEnum.MEDIUM}' ${pizza.size === enums.sizeEnum.MEDIUM && 'selected'}>Средняя</option>`}
+      ${pizza.addingBySize[enums.sizeEnum.SMALL] && `<option value='${enums.sizeEnum.SMALL}' ${pizza.size === enums.sizeEnum.SMALL && 'selected'}>Маленькая</option>`}
     </select>
-    <h2>Выберите размер</h2>
+    <h2>Выберите топпинг</h2>
     <div class="flex-column">
       <div class="toppings-wrapper">
-        ${renderToppingCard(data.toppings[enums.toppingsEnum.CREAMY_MOZZARELLA][pizza.size].cost, enums.toppingsEnum['CREAMY_MOZZARELLA'])}
-        ${renderToppingCard(data.toppings[enums.toppingsEnum.CHEESE_BOARD][pizza.size].cost, enums.toppingsEnum['CHEESE_BOARD'])}
-        ${renderToppingCard(data.toppings[enums.toppingsEnum.CHEDDAR_AND_PARMESAN][pizza.size].cost, enums.toppingsEnum['CHEDDAR_AND_PARMESAN'])}
+        ${renderToppingCard(pizza, data.toppings[enums.toppingsEnum.CREAMY_MOZZARELLA][pizza.size].cost, enums.toppingsEnum['CREAMY_MOZZARELLA'])}
+        ${renderToppingCard(pizza, data.toppings[enums.toppingsEnum.CHEESE_BOARD][pizza.size].cost, enums.toppingsEnum['CHEESE_BOARD'])}
+        ${renderToppingCard(pizza, data.toppings[enums.toppingsEnum.CHEDDAR_AND_PARMESAN][pizza.size].cost, enums.toppingsEnum['CHEDDAR_AND_PARMESAN'])}
       </div>
       <button>Добавить в корзину за ${cost}Р (${energy} кКалл) </button>
     </div>
   `;
 
-  const elements = document.getElementsByClassName('topping-card');
-  for (element of elements) {
-      element.addEventListener('click', toggleActive.bind(element));
+  const toppingsElements = document.getElementsByClassName('topping-card');
+  for (element of toppingsElements) {
+    element.addEventListener('click', (function(event) {
+      const classlist = this.classList.toString().split(' ');
+      const topName = classlist?.[1];
+      const isActive = classlist?.[2];
+
+      if (isActive) {
+        executeTopping('remove', pizza, topName);
+      }
+      else {
+        executeTopping('add', pizza, topName);
+      }
+      rerenderAll();
+    }).bind(element))
   }
 
   const selectSizeNode = document.getElementById('select-size');
-  selectSizeNode.onchange = (ev) => {
-    alert(ev.target.value);
-  }
+  selectSizeNode.onchange = (ev) => changePizzaSize(ev.target.value);
 };
 
-function toggleActive (event) {
-  this.classList.toggle('active');
+/**
+ * 
+ * @param {'add' | 'remove'} op 
+ * @param {import('../models/Pizza'.default)} pizza 
+ * @param {1|2|3} toppingType enum
+ */
+const executeTopping = (op, pizza, toppingName) => {
+  switch(op) {
+    case 'add':
+      pizza.addTopping(toppingName);
+      break;
+    case 'remove':
+      pizza.removeTopping(toppingName);
+      break;
+  }
 }

@@ -15,30 +15,50 @@ const bavarian = baseAssortiment.bavarian;
 const enums = {sizeEnum, toppingsEnum, nameTypeEnum}
 
 console.group('Т.к. использовал модульность вынес в глобалы');
-console.log('Pizza = class Pizza');
-console.log('margarita, pepperoni, bavarian, toppings, baseAssortiment, enums доступны');
+console.log('pizzas - список пицц');
+console.log('toppings, baseAssortiment, enums доступны');
 console.log('Балуйтесь в консоле)');
-console.log(`Пример const pizz = baseAssortiment['margarita'] и развлекайтесь с ней`);
 console.groupEnd();
 
-window.margarita = margarita;
-window.pepperoni = pepperoni;
-window.bavarian = bavarian;
 window.baseAssortiment = baseAssortiment;
 window.toppings = toppings;
 window.enums = enums;
-window.Pizza = Pizza;
 
 const rootDiv = document.getElementById('root');
 const pizzasDiv = document.getElementById('pizzasContainer');
 const controlDiv = document.getElementById('control');
 const basketDiv = document.getElementById('basket');
 
-const Pizzas=[
-  baseAssortiment['margarita'],
-  baseAssortiment['pepperoni'],
-  baseAssortiment['bavarian']
-];
+const pizzas = {
+  [enums.nameTypeEnum.MARGARITA]: {
+    class: baseAssortiment['margarita']
+  },
+  [enums.nameTypeEnum.PEPPERONI]: {
+    class: baseAssortiment['pepperoni']
+  },
+  [enums.nameTypeEnum.BAVARIAN]: {
+    class: baseAssortiment['bavarian']
+  },
+  isActive: null
+}
 
-renderPizzas(Pizzas, pizzasDiv);
-renderControl(baseAssortiment['margarita'], controlDiv);
+window.pizzas = pizzas;
+
+const rerenderAll=()=>{
+  renderPizzas(pizzas, pizzasDiv, handlers.clickPizzaCardHandler);
+  renderControl(pizzas[pizzas.isActive], controlDiv, handlers);
+};
+
+const handlers = {
+  clickPizzaCardHandler: (number) => {
+    pizzas.isActive = number;
+    rerenderAll();
+  },
+  changePizzaSize: (size, pizzaType = Number(pizzas.isActive)) => {
+    pizzas[pizzaType].class.size = Number(size);
+    rerenderAll();
+  },
+  rerenderAll
+} 
+
+rerenderAll();
