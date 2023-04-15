@@ -24,7 +24,7 @@ export default class Pizza {
       case nameTypeEnum.MARGARITA:
         return 'Маргарита';
       case nameTypeEnum.PEPPERONI:
-        return 'Пеперони';
+        return 'Пепперони';
       default: //на крайняк из енума будет прямое значение брать
         const values = Object.values(nameTypeEnum);
         const index = values.findIndex((id)=>id===this.size);
