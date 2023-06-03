@@ -29,6 +29,11 @@ switch ($page) {
         $params['gallery'] = getGallery(BIG_IMGS);
         break;
 
+    case 'lesson20':
+        $params['title'] = 'lesson20';
+        $params['folders'] = getFolders();
+        break;
+
     case 'apicatalog':
         echo json_encode(getCatalog(), JSON_UNESCAPED_UNICODE);
         die();

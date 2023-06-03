@@ -16,3 +16,4 @@ include "../engine/catalog.php";
 include "../engine/menu.php";
 include "../engine/news.php";
 include "../engine/gallery.php";
+include "../engine/lesson20.php";
