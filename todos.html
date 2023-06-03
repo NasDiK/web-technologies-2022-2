@@ -11,14 +11,37 @@
 <body>
 <header class="header">
     <nav class="nav">
-        <a href="/index.html">index</a>
-        <a href="/user.html">user</a>
-        <a href="/logout.html">logout</a>
+        <a href="/index.html">Главная</a>
+        <a href="/user.html">Пользователи</a>
+        <a href="/logout.html">Выйти</a>
     </nav>
 </header>
 
 <main class="main">
+    <form
+            id="todos"
+            class="form"
+    >
+        <label class="text-field">
+            <input
+                    type="text"
+                    class="text-field__input"
+                    name="description"
+                    placeholder="Описание"
+            >
+            <span class="text-field__error"></span>
+        </label>
 
+        <button
+                type="submit"
+                class="button"
+        >
+            Добавить элемент
+        </button>
+    </form>
+    <div id="todos-items" class="todos-items">
+
+    </div>
 </main>
 
 <div class="loader-wrapper" data-loading>
