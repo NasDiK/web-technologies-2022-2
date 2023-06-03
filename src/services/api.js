@@ -12,17 +12,15 @@ const api = async (url, options = {}) => {
         headers["Authorization"] = `Bearer ${token}`
     }
 
-    const result = await Promise.all([
-        await new Promise(resolve => setTimeout(() => resolve(), 200)),
-        await fetch(config.BASE_URL + url, {
+    const [_, result] = await Promise.all([
+        new Promise(resolve => setTimeout(resolve, 1)),
+        fetch(config.BASE_URL + url, {
             ...options,
             headers
         })
     ])
 
-    const response = result[1]
-
-    return await response.json()
+    return await result.json();
 }
 
 export default api
