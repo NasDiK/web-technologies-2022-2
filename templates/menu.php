@@ -1,5 +1,3 @@
-<a href="/engine/">Главная</a>
-<a href="/engine/?page=catalog">Каталог</a>
-<a href="/engine/?page=about">О нас</a><br>
-
-
+<?php foreach ($links as $item): ?>
+    <a href="/engine/?page=<?= $item['link'] ?>"><?= $item['title'] ?></a>
+<?php endforeach;?> 

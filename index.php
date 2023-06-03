@@ -14,14 +14,21 @@ switch ($page) {
     case 'index':
         $params['title'] = 'Главная';
         $params['test'] = 'Тестовая запись';
+        $params['links'] = getLinks();
         break;
     case 'catalog':
         $params['title'] = 'Каталог';
         $params['catalog'] = getCatalog();
+        $params['links'] = getLinks();
         break;
     case 'about':
         $params['title'] = 'О нас';
         $params['phone'] = '+7 495 123 23 23';
+        $params['links'] = getLinks();
+        break;
+    case 'lesson18':
+        $params['title'] = 'lesson18';
+        $params['links'] = getLinks();
         break;
 
     case 'apicatalog':
@@ -31,6 +38,27 @@ switch ($page) {
     default:
         echo "404";
         die();
+}
+
+function getLinks() {
+    return [
+        [
+            'title' => 'Главная',
+            'link' => 'index',
+        ],
+        [
+            'title' => 'Каталог',
+            'link' => 'catalog',
+        ],
+        [
+            'title' => 'О нас',
+            'link' => 'about',
+        ],
+        [
+            'title' => 'lesson18',
+            'link' => 'lesson18'
+        ]
+    ];
 }
 
 function getCatalog() {
@@ -69,6 +97,6 @@ function renderTemplate($page, $params = []) {
 
 echo renderTemplate(LAYOUTS_DIR . 'main', [
     'title' => $params['title'],
-    'menu' => renderTemplate('menu'),
+    'menu' => renderTemplate('menu', $params),
     'content' => renderTemplate($page, $params)
 ]);
